@@ -35,8 +35,7 @@ pipeline {
         stage('Deploy') {
             input {
                 message 'Deploy?'
-                ok "Yes"
-                abort "No"
+                ok "Let's do it!"
                 parameters {
                     string(
                         name: 'TARGET_ENV',
