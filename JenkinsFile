@@ -38,9 +38,10 @@ pipeline {
                 ok "Yes"
                 abort "No"
                 parameters {
-                    name: 'TARGET_ENV',
-                    defaultValue: 'PROD',
-                    description: 'Target deployment environment'
+                    string(
+                        name: 'TARGET_ENV',
+                        defaultValue: 'PROD',
+                        description: 'Target deployment environment')
                 }
             }
             steps {
