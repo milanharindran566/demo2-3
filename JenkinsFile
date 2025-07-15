@@ -48,10 +48,10 @@ pipeline {
                 echo "Deploying release ${RELEASE} to environment ${TARGET_ENV}"
             }
         }
-        post {
+    }
+    post {
             always {
                 echo "Always is executed regardless of whatever happens."
             }
         }
-    }
 }
