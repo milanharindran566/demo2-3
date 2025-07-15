@@ -50,8 +50,14 @@ pipeline {
         }
     }
     post {
-            always {
-                echo "Always is executed regardless of whatever happens."
-            }
+        always {
+            echo "Always is executed regardless of whatever happens."
         }
+        failed {
+            echo "Failed"
+        }
+        success {
+            echo "Success"
+        }
+    }
 }
